@@ -144,22 +144,27 @@
   }
   /* BANNER */
   .banner{
-    background-color: var(--clr-accent);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    background-color: var(--clr-border);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   .banner .banner__wrapper{
-    display: grid;
-    grid-template-columns: 3fr 3fr;
+    display: flex;
     max-height: 50rem;
-    padding-top: 6rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8rem;
+  }
+  .banner .banner__right img{
+    width: 75rem;
+    height: 45rem;
     padding-bottom: 2rem;
   }
   .banner .banner__left{
     padding-right: 8rem;
   }
   .banner .banner__left .banner__heading{
-    color: var(--clr-dark);
+    color: var(--clr-accent);
     letter-spacing: 1rem;
     font-family: var(--font-primary);
     margin-bottom: 2rem;
@@ -170,17 +175,13 @@
     text-align: left;
     font-size: 4rem;
     margin-bottom: 2rem;
-    max-width: 60rem;
+    max-width: 80rem;
   }
   .banner .banner__left .banner__details p{
     color: var(--clr-gray);
     text-align: left;
     margin-bottom: 3rem;
-  }
-  .banner .banner__right img{
-    position: relative;
-    align-items: center;
-    width: 46.5;
+    max-width: 90rem;
   }
   /* RECIPE */
   .recipe{
@@ -190,10 +191,13 @@
   }
   .recipe .recipe__wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 210px 210px 210px 210px;
     gap: 2rem;
   }
-  .recipe .recipe__img .recipe__details h2{
+  .recipe .recipe__wrapper .recipe__card img{
+    height: 30rem;
+  }
+  .recipe .recipe__card .recipe__details h2{
     color: var(--clr-accent);
     font-family: var(--font-primary);
     font-size: 1rem;
@@ -202,7 +206,7 @@
     margin-top: 1rem;
     margin-bottom: .5rem;
   }
-  .recipe .recipe__img .recipe__details h3{
+  .recipe .recipe__card .recipe__details h3{
     color: var(--clr-dark);
     font-family: var(--font-secondary);
     font-size: 1rem;
@@ -210,7 +214,7 @@
     text-align: center; 
     margin-bottom: .5rem;
   }
-  .recipe .recipe__img .recipe__details p{
+  .recipe .recipe__card .recipe__details p{
     color: var(--clr-dark);
     font-family: var(--font-primary);
     font-size: 1rem;
@@ -221,25 +225,26 @@
     font-family: var(--font-secondary);
     text-align: center;
     justify-content: center;
+    margin-bottom: 2rem;
   }
   .recipe .recipe__title h3::after{
     display: inline-block;
     position: relative;
     content: " ";
     background-color: var(--clr-accent);
-    width: 30rem;
+    width: 37rem;
     height: .2rem;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: .5rem;
+    left: 1rem;
   }
   .recipe .recipe__title h3::before{
     display: inline-block;
     position: relative;
     content: " ";
     background-color: var(--clr-accent);
-    width: 30rem;
+    width: 37rem;
     height: .2rem;
-    bottom: 1rem;
+    bottom: .5rem;
     right: 1rem;
   }
   /* RECIPE COLLECTIONS */
@@ -249,28 +254,26 @@
   .collections .collections__title h3{
     color: var(--clr-accent);
     font-family: var(--font-secondary);
-    text-align: center;
-    justify-content: center;
+    padding-left: 19rem;
+    margin-bottom: 1rem;
   }
   .collections .collections__title h3::after{
     display: inline-block;
     position: relative;
     content: " ";
     background-color: var(--clr-accent);
-    width: 30rem;
+    width: 75rem;
     height: .2rem;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 5px;
+    left: 1rem;
   }
   .collections .collections__content {
     max-width: 100rem;
     margin: 0 auto;
     text-align: center;
     padding: 2rem 0;
-    /* justify-content: space-between; */
   }
   .collections .collections__items .collections__right {
-    /* max-width: 50rem; */
     text-align: justify;
   }
   .collections .collections__items .collections__left img{
@@ -318,20 +321,35 @@
   }
   /* NEWSLETTER */
   .newsletter{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.5)),
+    background-image: linear-gradient(rgba(80, 76, 76, 0.4),
+    rgba(80, 76, 76, 0.4)),
      url(https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/2/26/1/WU1307H_stuffed-peppers_s4x3.jpg.rend.hgtvcom.791.594.suffix/1456516812436.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 30vh;
+    width: 140rem;
+    height: 40rem;
     padding-top: 10rem;
-    /* display: flex; */
+    padding-bottom: 10rem;
     align-items: center;
     text-align: center;
   }
+  .newsletter form{
+    height: 4rem;
+    max-width: 130rem;
+  }
+  .newsletter form a{
+    height: 4rem;
+  }
+  .newsletter form input{
+    background-color: var(--clr-light);
+    height: 4rem;
+    width: 70rem;
+    border: 0px;
+    padding-top: .5rem;
+  }
   .newsletter .newsletter__title h1{
     font-family: var(--font-secondary);
-    font-size: 2rem;
+    font-size: 5rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 2rem;
@@ -340,57 +358,94 @@
     font-family: var(--font-primary);
     font-size: 1rem;
     text-align: center;
+    margin-bottom: 2rem;
   }
   /* CLASSIC COLLECTIONS */
   .collectionClassic{
     background-color: var(--clr-light);
+    padding-top: 4rem;
   }
   .collectionClassic .collectionClassic__wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: .5rem;
+    grid-template-columns: 290px 290px 290px;
+    gap: 2rem;
+    justify-content: center;
+    padding-right: 2.5rem;
+    margin-bottom: 4rem;
   }
-  .collectionClassic .collectionClassic__content .collectionClassic__title h3{
+  .collectionClassic .collectionClassic__title h3{
     color: var(--clr-accent);
     font-family: var(--font-secondary);
-    text-align: start;
-    justify-content: center;
-    padding: 4rem;
+    padding: 2rem;
+    padding-left: 19rem;
   }
-  .collectionClassic .collectionClassic__content .collectionClassic__title h3::after{
+  .collectionClassic .collectionClassic__title h3::after{
     display: inline-block;
     position: relative;
     content: " ";
     background-color: var(--clr-accent);
-    width: 30rem;
+    width: 75rem;
     height: .2rem;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 5px;
+    left: 1rem;
   }
-  .collectionClassic .collectionClassic__card{
+  .collectionClassic .collectionClassic__wrapper .collectionClassic__card{
     color: var(--clr-light);
+    display: flex;
+    padding-left: 3rem;
   }
-  .collectionClassic .collectionClassic__wrapper .collectionClassic__left img{
-    width: 15rem;
-    height: 20rem;
+  .collectionClassic .collectionClassic__card .collectionClassic__left img{
+    width: 7rem;
+    height: 10rem;
   }
   .collectionClassic .collectionClassic__card .collectionClassic__right h2{
     color: var(--clr-accent);
     font-family: var(--clr-primary);
-    letter-spacing: 2rem;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
   }
   .collectionClassic .collectionClassic__card .collectionClassic__right h3{
-    color: var(--clr-dark);
+    color: var(--clr-gray);
     font-family: var(--font-secondary);
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: .5rem; 
+  }
+  .collectionClassic .collectionClassic__card .collectionClassic__right .collectionClassic__stars a{
+    color: var(--clr-accent);
+    font-size: 1.2rem;
   }
   .collectionClassic .collectionClassic__card .collectionClassic__right p{
-    color: var(--clr-dark);
+    color: var(--clr-gray);
     font-family: var(--clr-primary);
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-top: .5rem;
+  }
+  .collectionClassic .collectionClassic__card .collectionClassic__right{
+    padding-left: 1rem;
+  }
+  /* FOOTER */
+  .footer{
+    background-color: var(--clr-border);
+    padding: 2rem 0;
+  }
+  .footer .footer__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .footer__wrapper h1{
+    color: var(--clr-gray);
+    font-size: 2rem;
+    font-weight: 600rem;
+    margin-bottom: 1rem;
+  }
+  .footer .footer__wrapper p{
+    margin-bottom: 1rem;
+    color: var(--clr-gray);
   }
   /*REPEATABLE PATTERNS*/
 .btn{
@@ -401,6 +456,6 @@
     font-weight: 500;
 }
 .btn.bg--accent{
-    background-color: var(--clr-dark);
+    background-color: var(--clr-accent);
     color: var(--clr-light);
 }
