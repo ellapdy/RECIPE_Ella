@@ -1,0 +1,406 @@
+:root{
+    --clr-accent: #d9964a;
+    --clr-blue: #0b5089;
+    --clr-dark: #2b2b2b;
+    --clr-light: #ffffff;
+    --clr-border: #f9e9d7;
+    --clr-gray: #666666;
+    --font-primary: "Mulish", sans-serif;
+    --font-secondary: "Playfair Display", serif;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  font,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+    list-style: none;
+  }
+  html {
+    font-size: 62.5%;
+    height: 100%;
+  }
+  body {
+    color: var(--clr-light);
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    line-height: 1.4;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  article,
+  aside,
+  footer,
+  header,
+  nav,
+  section,
+  time {
+    display: block;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+
+  /* HEADER */
+  .header{
+    background-color: var(--clr-light);
+    padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+  }
+  .header .header__wrapper{
+    justify-content: space-between;
+  }
+  .header .header__wrapper h1{
+    color: var(--clr-gray);
+    font-style: 2rem;
+    font-weight: 600;
+  }
+  /* BANNER */
+  .banner{
+    background-color: var(--clr-accent);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .banner .banner__wrapper{
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    max-height: 50rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
+  .banner .banner__left{
+    padding-right: 8rem;
+  }
+  .banner .banner__left .banner__heading{
+    color: var(--clr-dark);
+    letter-spacing: 1rem;
+    font-family: var(--font-primary);
+    margin-bottom: 2rem;
+  }
+  .banner .banner__left .banner__title{
+    color: var(--clr-gray);
+    font-family: var(--font-secondary);
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    max-width: 60rem;
+  }
+  .banner .banner__left .banner__details p{
+    color: var(--clr-gray);
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  .banner .banner__right img{
+    position: relative;
+    align-items: center;
+    width: 46.5;
+  }
+  /* RECIPE */
+  .recipe{
+    background-color: var(--clr-light);
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+  }
+  .recipe .recipe__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  .recipe .recipe__img .recipe__details h2{
+    color: var(--clr-accent);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+  .recipe .recipe__img .recipe__details h3{
+    color: var(--clr-dark);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 50;
+    text-align: center; 
+    margin-bottom: .5rem;
+  }
+  .recipe .recipe__img .recipe__details p{
+    color: var(--clr-dark);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .recipe .recipe__title h3{
+    color: var(--clr-accent);
+    font-family: var(--font-secondary);
+    text-align: center;
+    justify-content: center;
+  }
+  .recipe .recipe__title h3::after{
+    display: inline-block;
+    position: relative;
+    content: " ";
+    background-color: var(--clr-accent);
+    width: 30rem;
+    height: .2rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .recipe .recipe__title h3::before{
+    display: inline-block;
+    position: relative;
+    content: " ";
+    background-color: var(--clr-accent);
+    width: 30rem;
+    height: .2rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  /* RECIPE COLLECTIONS */
+  .collections {
+    padding-top: 4rem;
+  }
+  .collections .collections__title h3{
+    color: var(--clr-accent);
+    font-family: var(--font-secondary);
+    text-align: center;
+    justify-content: center;
+  }
+  .collections .collections__title h3::after{
+    display: inline-block;
+    position: relative;
+    content: " ";
+    background-color: var(--clr-accent);
+    width: 30rem;
+    height: .2rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .collections .collections__content {
+    max-width: 100rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+    /* justify-content: space-between; */
+  }
+  .collections .collections__items .collections__right {
+    /* max-width: 50rem; */
+    text-align: justify;
+  }
+  .collections .collections__items .collections__left img{
+    width: 40rem;
+    height: 30rem;
+  }
+  .collections .collections__items .collections__right h2 {
+    color: var(--clr-accent);
+    font-family: var(--clr-primary);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1rem;
+    text-align: left;
+  }
+  .collections .collections__items .collections__right h3 {
+    color: var(--clr-dark);
+    font-family: var(--font-secondary);
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: left;
+    max-width: 40rem;
+  }
+  .collections .collections__items .collections__right p {
+    color: var(--clr-dark);
+    font-family: var(--clr-primary);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    text-align: justify;
+    max-width: 39rem;
+  }
+  .collections__wrapper:nth-of-type(odd) { 
+    background-color: var(--clr-light);
+  }
+  .collections__wrapper:nth-of-type(even) {
+    background-color: var(--clr-light);
+  }
+  .collections .collections__items{
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+    justify-content: center
+  }
+  .collections__wrapper:nth-of-type(odd) .collections__items {
+    flex-direction: row-reverse;
+  }
+  /* NEWSLETTER */
+  .newsletter{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)),
+     url(https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/2/26/1/WU1307H_stuffed-peppers_s4x3.jpg.rend.hgtvcom.791.594.suffix/1456516812436.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    padding-top: 10rem;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+  }
+  .newsletter .newsletter__title h1{
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .newsletter .newsletter__title p{
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-align: center;
+  }
+  /* CLASSIC COLLECTIONS */
+  .collectionClassic{
+    background-color: var(--clr-light);
+  }
+  .collectionClassic .collectionClassic__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+  }
+  .collectionClassic .collectionClassic__content .collectionClassic__title h3{
+    color: var(--clr-accent);
+    font-family: var(--font-secondary);
+    text-align: start;
+    justify-content: center;
+    padding: 4rem;
+  }
+  .collectionClassic .collectionClassic__content .collectionClassic__title h3::after{
+    display: inline-block;
+    position: relative;
+    content: " ";
+    background-color: var(--clr-accent);
+    width: 30rem;
+    height: .2rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .collectionClassic .collectionClassic__card{
+    color: var(--clr-light);
+  }
+  .collectionClassic .collectionClassic__wrapper .collectionClassic__left img{
+    width: 15rem;
+    height: 20rem;
+  }
+  .collectionClassic .collectionClassic__card .collectionClassic__right h2{
+    color: var(--clr-accent);
+    font-family: var(--clr-primary);
+    letter-spacing: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .collectionClassic .collectionClassic__card .collectionClassic__right h3{
+    color: var(--clr-dark);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .collectionClassic .collectionClassic__card .collectionClassic__right p{
+    color: var(--clr-dark);
+    font-family: var(--clr-primary);
+    font-size: 1rem;
+  }
+  /*REPEATABLE PATTERNS*/
+.btn{
+    background-color: transparent;
+    border: transparent;
+    padding: 1rem 3rem;
+    color: transparent;
+    font-weight: 500;
+}
+.btn.bg--accent{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
